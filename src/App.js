@@ -9,6 +9,9 @@ import Amenities from "./components/Amenities";
 import Contact from "./components/Contact";
 import RoomMaps from "./components/RoomMaps";
 import DownloadBrochure from "./components/DownloadBrochure";
+import EnquiryForm from "./components/EnquiryForm";
+import WhatsAppButton from "./components/WhatsAppButton";
+import ButtonGroup from "./components/ButtonGroup";
 
 function App() {
   return (
@@ -20,8 +23,9 @@ function App() {
       <RoomMaps />
       <Amenities />
       <Gallery />
+      <EnquiryForm />
       <Contact />
-      <DownloadBrochure />
+      <ButtonGroup />
     </div>
   );
 }

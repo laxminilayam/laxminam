@@ -38,8 +38,8 @@ const Navbar = () => {
                     >
                         <a href="#home" className="flex items-center space-x-1">
                             <img src={logo} alt="Logo" className="h-16 w-auto" />
-                            <div className="md:block hidden">
-                                <span className="text-2xl font-bold text-blue-600">Lakshmi Nilayam</span>
+                            <div className="">
+                                <span className="md:text-2xl text-md font-bold text-blue-600">Lakshmi Nilayam</span>
                             </div>
                         </a>
                     </motion.div>

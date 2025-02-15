@@ -271,7 +271,7 @@ const FloorPlans = () => {
                             >
                                 <motion.div
                                     animate={floatingAnimation}
-                                    className="relative overflow-hidden rounded-xl backdrop-blur-lg bg-gradient-to-br from-white/10 via-white/5 to-transparent 
+                                    className="relative overflow-hidden rounded-xl backdrop-blur-lg bg-gradient-to-br from-black/40 via-black/30 to-black/40 
                                              border border-white/20 shadow-xl transform-gpu transition-all duration-500 hover:border-purple-500/30"
                                 >
                                     {/* Image and content container */}
@@ -281,8 +281,8 @@ const FloorPlans = () => {
                                             alt={plan.type}
                                             className="object-cover w-full h-full transform transition-transform duration-700 group-hover:scale-110"
                                         />
-                                        {/* Lock button and gradient overlay remain the same */}
-
+                                        {/* Add a dark overlay */}
+                                        <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-300"></div>
                                         {/* Update the content section */}
                                         <div className="absolute bottom-0 left-0 right-0 p-6 transform transition-transform duration-300">
                                             <div className="space-y-3">

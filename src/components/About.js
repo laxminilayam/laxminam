@@ -304,9 +304,9 @@ const About = () => {
                                 </motion.h3>
 
                                 <motion.p variants={fadeIn} className="font-merriweather text-sm md:text-lg text-gray-700 leading-relaxed">
-                                    Laxmi Nilayam is a place where your dream home becomes a reality. This gated community is designed to offer a perfect mix of comfort, style, and convenience.
+                                    Laxmi Nilayam is a place where your dream home becomes a reality. This gated community is designed to offer a perfect mix of comfort, style, and convenience.<br /><br />
                                     Madhu Infrastructure Pvt Ltd is reinventing real estate spaces by pairing the industry’s top talents with technology. The brightest of minds in engineering, design and strategy work behind the scenes to offer the innovative and futuristic real estate developments across Telangana and Andhra Pradesh.
-                                    Our journey is driven by a vision to build more than just structures – we build homes, communities, and lasting relationships. From building modern apartments, or commercial spaces, each project is crafted with attention to detail, using the finest materials and sustainable practices.
+                                    Our journey is driven by a vision to build more than just structures – we build homes, communities, and lasting relationships. From building modern apartments, or commercial spaces, each project is crafted with attention to detail, using the finest materials and sustainable practices.<br /><br />
                                     We believe in working closely with our clients, understanding their needs, and delivering tailored solutions that exceed expectations. Our team of skilled architects, engineers, and project managers are committed to ensuring timely delivery, transparency, and excellence in every step of the process. With a decade of experience, we move forward with a vision to build futuristic constructions that could bring a significant change in the real estate industry of our country.
                                 </motion.p>
 

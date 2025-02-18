@@ -17,7 +17,7 @@ const Banner = () => {
                     className="text-center"
                 >
                     <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight">
-                        Laxmi Nilayam – Where Every Brick Tells a Story of Comfort
+                        Lakshmi Nilayam – Where Every Brick Tells a Story of Comfort
                     </h1>
                 </motion.div>
             </div>

@@ -43,7 +43,7 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             id="home"
-            className="md:h-screen h-full relative flex flex-col items-center pt-32" // Changed from justify-center to pt-32
+            className="md:h-screen h-[60vh] relative flex flex-col items-center pt-32" // Changed from justify-center to pt-32
         >
             {/* Audio Control Button */}
             <motion.button
@@ -97,7 +97,7 @@ const Hero = () => {
                 >
                     Welcome to{' '}
                     <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-blue-100 to-purple-100">
-                        Laxmi Nilayam
+                        Lakshmi Nilayam
                     </span>
                 </motion.h1>
             </div>

@@ -13,7 +13,7 @@ const EnquiryForm = () => {
                     </div>
                 ) : (
                     <form
-                        action="https://formsubmit.co/YOUR_EMAIL_HERE" // Replace with your email
+                        action="https://formsubmit.co/lakshminilayam776@gmail.com" // Replace with your email
                         method="POST"
                         className="space-y-4"
                     >

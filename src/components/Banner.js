@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const Banner = () => {
     return (
-        <div className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div className="relative merriweather overflow-hidden bg-gradient-to-r from-blue-600 to-purple-600 text-white">
             <div className="absolute inset-0">
                 <div className="absolute inset-0 bg-black opacity-50"></div>
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600/30 to-purple-600/30"></div>
@@ -17,7 +17,7 @@ const Banner = () => {
                     className="text-center"
                 >
                     <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight">
-                        Live Your Dream, Celebrate Every Day
+                        Laxmi Nilayam – Where Every Brick Tells a Story of Comfort
                     </h1>
                 </motion.div>
             </div>

@@ -179,29 +179,8 @@ const FloorPlans = () => {
     };
 
     return (
-        <section id="floor-plans" className="relative min-h-screen py-20 bg-gradient-to-b from-slate-900 via-purple-900 to-slate-900">
-            {/* Enhanced animated background */}
-            <div className="absolute inset-0">
-                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-purple-500/20 to-rose-500/20" />
-                <motion.div
-                    className="absolute inset-0"
-                    animate={{
-                        background: [
-                            'radial-gradient(circle at 50% 50%, rgba(76, 29, 149, 0.1) 0%, transparent 50%)',
-                            'radial-gradient(circle at 50% 50%, rgba(124, 58, 237, 0.1) 0%, transparent 50%)',
-                            'radial-gradient(circle at 50% 50%, rgba(76, 29, 149, 0.1) 0%, transparent 50%)'
-                        ]
-                    }}
-                    transition={{
-                        duration: 5,
-                        repeat: Infinity,
-                        repeatType: "reverse"
-                    }}
-                />
-            </div>
-
+        <section id="floor-plans" className="relative min-h-screen py-20 bg-gradient-to-b from-white via-blue-50 to-white">
             <div className="relative z-10 max-w-7xl mx-auto px-4">
-                {/* Enhanced Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -211,9 +190,9 @@ const FloorPlans = () => {
                         className="text-6xl font-bold"
                         animate={{
                             backgroundImage: [
-                                'linear-gradient(to right, #60a5fa, #a78bfa, #f472b6)',
-                                'linear-gradient(to right, #34d399, #60a5fa, #a78bfa)',
-                                'linear-gradient(to right, #60a5fa, #a78bfa, #f472b6)'
+                                'linear-gradient(to right, #3b82f6, #8b5cf6, #ec4899)',
+                                'linear-gradient(to right, #10b981, #3b82f6, #8b5cf6)',
+                                'linear-gradient(to right, #3b82f6, #8b5cf6, #ec4899)'
                             ]
                         }}
                         transition={{ duration: 5, repeat: Infinity }}
@@ -226,14 +205,9 @@ const FloorPlans = () => {
                     >
                         Floor Plans
                     </motion.h2>
-                    <p className="text-gray-300 mt-4">Explore our detailed floor plans to find the perfect home for you.</p>
-                    {/* Category Filter with new design */}
-                    <motion.div
-                        className="flex flex-wrap justify-center gap-4 mt-12"
-                        variants={{
-                            visible: { transition: { staggerChildren: 0.1 } }
-                        }}
-                    >
+                    <p className="text-gray-600 mt-4">Explore our detailed floor plans to find the perfect home for you.</p>
+
+                    <motion.div className="flex flex-wrap justify-center gap-4 mt-12">
                         {categories.map((category) => (
                             <motion.button
                                 key={category.id}
@@ -241,7 +215,7 @@ const FloorPlans = () => {
                                 className={`px-6 py-3 rounded-full transition-all duration-300 backdrop-blur-sm
                                     ${selectedCategory === category.id
                                         ? 'bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white shadow-lg shadow-purple-500/30'
-                                        : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20'}`}
+                                        : 'bg-white text-gray-600 hover:bg-gray-100 border border-gray-200'}`}
                                 whileHover={{ scale: 1.05, y: -2 }}
                                 whileTap={{ scale: 0.95 }}
                             >
@@ -271,8 +245,8 @@ const FloorPlans = () => {
                             >
                                 <motion.div
                                     animate={floatingAnimation}
-                                    className="relative overflow-hidden rounded-xl backdrop-blur-lg bg-gradient-to-br from-black/40 via-black/30 to-black/40 
-                                             border border-white/20 shadow-xl transform-gpu transition-all duration-500 hover:border-purple-500/30"
+                                    className="relative overflow-hidden rounded-xl backdrop-blur-lg bg-white 
+                                             border border-gray-200 shadow-xl transform-gpu transition-all duration-500 hover:border-blue-200"
                                 >
                                     {/* Image and content container */}
                                     <div className="aspect-w-16 aspect-h-12 relative">
@@ -284,15 +258,16 @@ const FloorPlans = () => {
                                         {/* Add a dark overlay */}
                                         <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-300"></div>
                                         {/* Update the content section */}
+
                                         <div className="absolute bottom-0 left-0 right-0 p-6 transform transition-transform duration-300">
                                             <div className="space-y-3">
                                                 <div className="flex items-center justify-between flex-wrap gap-2">
                                                     <h3 className="text-xl md:text-2xl font-bold text-white">
                                                         {plan.type}
                                                     </h3>
-                                                    <span className="text-blue-400 font-semibold">{plan.area}</span>
+                                                    <span className="text-white font-semibold">{plan.area}</span>
                                                 </div>
-                                                <p className="text-gray-300 text-sm md:text-base">{plan.facing}</p>
+                                                <p className="text-white text-sm md:text-base">{plan.facing}</p>
 
                                                 {/* Features pills with improved responsiveness */}
                                                 <motion.div
@@ -308,8 +283,8 @@ const FloorPlans = () => {
                                                     {plan.highlights.map((highlight, index) => (
                                                         <motion.span
                                                             key={index}
-                                                            className="px-2 py-0.5 bg-blue-500/20 backdrop-blur-sm rounded-full 
-                                                                     text-blue-300 text-xs md:text-sm border border-blue-500/30"
+                                                            className="px-2 py-0.5 bg-blue-50 rounded-full 
+                                                                     text-blue-600 text-xs md:text-sm border border-blue-200"
                                                             whileHover={{ scale: 1.05 }}
                                                         >
                                                             {highlight}
@@ -345,8 +320,8 @@ const FloorPlans = () => {
                                 animate={{ scale: 1, opacity: 1 }}
                                 exit={{ scale: 0.5, opacity: 0 }}
                                 transition={{ type: "spring", bounce: 0.3 }}
-                                className="relative max-w-4xl w-full bg-gray-900/80 backdrop-blur-xl rounded-2xl 
-                                         overflow-hidden border border-white/10"
+                                className="relative max-w-4xl w-full bg-white 
+                                         overflow-hidden border border-gray-200"
                                 onClick={e => e.stopPropagation()}
                             >
                                 <div className="grid md:grid-cols-2 gap-6">
@@ -365,19 +340,18 @@ const FloorPlans = () => {
                                             <h3 className="text-3xl font-bold text-white mb-2">
                                                 {selectedPlan.type}
                                             </h3>
-                                            <p className="text-blue-400 text-xl">{selectedPlan.price}</p>
                                         </div>
 
                                         {/* Specifications */}
                                         <div className="space-y-4">
-                                            <h4 className="text-lg font-semibold text-gray-300">Specifications</h4>
+                                            <h4 className="text-lg font-semibold text-gray-600">Specifications</h4>
                                             <div className="grid grid-cols-2 gap-4">
-                                                <div className="text-gray-400">
+                                                <div className="text-gray-500">
                                                     <p>Bedrooms: {selectedPlan.details.bedrooms}</p>
                                                     <p>Bathrooms: {selectedPlan.details.bathrooms}</p>
                                                     <p>Balconies: {selectedPlan.details.balconies}</p>
                                                 </div>
-                                                <div className="text-gray-400">
+                                                <div className="text-gray-500">
                                                     <p>Super Built-up Area: {selectedPlan.details.supBuiltUpArea}</p>
                                                     <p>Carpet Area: {selectedPlan.details.carpetArea}</p>
                                                     <p>Floor Rise: {selectedPlan.details.floorRise}</p>
@@ -387,12 +361,12 @@ const FloorPlans = () => {
 
                                         {/* Highlights */}
                                         <div className="space-y-4">
-                                            <h4 className="text-lg font-semibold text-gray-300">Highlights</h4>
+                                            <h4 className="text-lg font-semibold text-gray-600">Highlights</h4>
                                             <div className="flex flex-wrap gap-2">
                                                 {selectedPlan.highlights.map((highlight, index) => (
                                                     <span
                                                         key={index}
-                                                        className="px-3 py-1 bg-blue-500/20 rounded-full text-blue-300 text-sm"
+                                                        className="px-3 py-1 bg-blue-50 rounded-full text-blue-600 text-sm"
                                                     >
                                                         {highlight}
                                                     </span>
@@ -403,7 +377,7 @@ const FloorPlans = () => {
                                         {/* Close Button */}
                                         <button
                                             onClick={() => setSelectedPlan(null)}
-                                            className="absolute top-4 right-4 p-2 text-gray-400 hover:text-white"
+                                            className="absolute top-4 right-4 p-2 text-gray-500 hover:text-gray-800"
                                         >
                                             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
@@ -427,7 +401,8 @@ const FloorPlans = () => {
                             onClick={closeZoomedImage}
                         >
                             <motion.div
-                                className="relative max-w-4xl w-full bg-gray-900/80 backdrop-blur-xl rounded-2xl overflow-hidden border border-white/10"
+                                className="relative max-w-4xl w-full bg-white 
+                                         overflow-hidden border border-gray-200"
                                 initial={{ scale: 0.8 }}
                                 animate={{ scale: 1 }}
                                 exit={{ scale: 0.8 }}
@@ -446,22 +421,22 @@ const FloorPlans = () => {
                                     {/* Details Section */}
                                     <div className="p-6 space-y-6">
                                         <div>
-                                            <h3 className="text-3xl font-bold text-white mb-2">
+                                            <h3 className="text-3xl font-bold text-gray-800 mb-2">
                                                 {zoomedImage.type}
                                             </h3>
-                                            <p className="text-blue-400 text-xl">{zoomedImage.price}</p>
+                                            <p className="text-blue-600 text-xl">{zoomedImage.price}</p>
                                         </div>
 
                                         {/* Specifications */}
                                         <div className="space-y-4">
-                                            <h4 className="text-lg font-semibold text-gray-300">Specifications</h4>
+                                            <h4 className="text-lg font-semibold text-gray-600">Specifications</h4>
                                             <div className="grid grid-cols-2 gap-4">
-                                                <div className="text-gray-400">
+                                                <div className="text-gray-500">
                                                     <p>Bedrooms: {zoomedImage.details.bedrooms}</p>
                                                     <p>Bathrooms: {zoomedImage.details.bathrooms}</p>
                                                     <p>Balconies: {zoomedImage.details.balconies}</p>
                                                 </div>
-                                                <div className="text-gray-400">
+                                                <div className="text-gray-500">
                                                     <p>Super Built-up Area: {zoomedImage.details.supBuiltUpArea}</p>
                                                     <p>Carpet Area: {zoomedImage.details.carpetArea}</p>
                                                     <p>Floor Rise: {zoomedImage.details.floorRise}</p>
@@ -471,12 +446,12 @@ const FloorPlans = () => {
 
                                         {/* Highlights */}
                                         <div className="space-y-4">
-                                            <h4 className="text-lg font-semibold text-gray-300">Highlights</h4>
+                                            <h4 className="text-lg font-semibold text-gray-600">Highlights</h4>
                                             <div className="flex flex-wrap gap-2">
                                                 {zoomedImage.highlights.map((highlight, index) => (
                                                     <span
                                                         key={index}
-                                                        className="px-3 py-1 bg-blue-500/20 rounded-full text-blue-300 text-sm"
+                                                        className="px-3 py-1 bg-blue-50 rounded-full text-blue-600 text-sm"
                                                     >
                                                         {highlight}
                                                     </span>
@@ -487,7 +462,7 @@ const FloorPlans = () => {
                                         {/* Close Button */}
                                         <button
                                             onClick={closeZoomedImage}
-                                            className="absolute top-4 right-4 p-2 text-gray-400 hover:text-white"
+                                            className="absolute top-4 right-4 p-2 text-gray-500 hover:text-gray-800"
                                         >
                                             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />

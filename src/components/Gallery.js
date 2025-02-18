@@ -158,7 +158,7 @@ const Gallery = () => {
                         animate={{ opacity: 1, y: 0 }}
                         className="text-6xl font-bold text-gray-900 mb-8"
                     >
-                        Our Gallery
+                        Gallery
                     </motion.h2>
 
 

@@ -303,16 +303,11 @@ const About = () => {
                                     Crafting Dreams Into Reality
                                 </motion.h3>
 
-                                <motion.p
-                                    variants={fadeIn}
-                                    className="font-merriweather text-sm md:text-lg text-gray-700 leading-relaxed"
-                                >
-                                    Lakshmi Nilayam is a place where your dream home becomes a reality. This gated community
-                                    is designed to offer a perfect mix of comfort, style, and convenience.
-                                    Madhu Infrastructure Pvt Ltd is reinventing real estate spaces by pairing the industry's top
-                                    talents with technology. The brightest of minds in engineering, design and strategy work
-                                    behind the scenes to offer the innovative and futuristic real estate developments across
-                                    Telangana and Andhra Pradesh.
+                                <motion.p variants={fadeIn} className="font-merriweather text-sm md:text-lg text-gray-700 leading-relaxed">
+                                    Laxmi Nilayam is a place where your dream home becomes a reality. This gated community is designed to offer a perfect mix of comfort, style, and convenience.
+                                    Madhu Infrastructure Pvt Ltd is reinventing real estate spaces by pairing the industry’s top talents with technology. The brightest of minds in engineering, design and strategy work behind the scenes to offer the innovative and futuristic real estate developments across Telangana and Andhra Pradesh.
+                                    Our journey is driven by a vision to build more than just structures – we build homes, communities, and lasting relationships. From building modern apartments, or commercial spaces, each project is crafted with attention to detail, using the finest materials and sustainable practices.
+                                    We believe in working closely with our clients, understanding their needs, and delivering tailored solutions that exceed expectations. Our team of skilled architects, engineers, and project managers are committed to ensuring timely delivery, transparency, and excellence in every step of the process. With a decade of experience, we move forward with a vision to build futuristic constructions that could bring a significant change in the real estate industry of our country.
                                 </motion.p>
 
                                 {/* Enhanced Features Grid */}
@@ -383,10 +378,9 @@ const About = () => {
                                     </h2>
                                     <IlluminatedCard className="bg-white/90 backdrop-blur-lg rounded-xl md:rounded-2xl p-4 md:p-8 shadow-xl hover:shadow-2xl transition-shadow duration-300">
                                         <p className="text-base md:text-xl text-gray-700 font-merriweather leading-relaxed">
-                                            To revolutionize living spaces in Andhra Pradesh and Telangana through innovative real estate development.
-                                            We transform challenges into opportunities, embracing teamwork and upholding the highest ethical standards.
-                                            Every project we undertake is a testament to our commitment to excellence and our vision of creating
-                                            communities that inspire pride and joy in their residents.
+                                            Our mission is to build innovative real estate development projects in Andhra Pradesh and Telangana. We believe in the ability to convert challenging situations into opportunities.
+                                            Teamwork being our foundation, we embrace values with an open mind. We follow high ethical standards, aim to overcome expectations and excel in every project we undertake.
+                                            At Laxmi Nilayam, every detail is thoughtfully created to make your life easier and more enjoyable. It’s not just a home—it’s a place you’ll be proud to call home.
                                         </p>
                                     </IlluminatedCard>
                                 </motion.div>
@@ -455,10 +449,10 @@ const About = () => {
                     </motion.div>
                 </div>
                 {/* Add Parallax Text before main content */}
-                <div className="flex flex-col md:flex-row text-xl md:text-5xl justify-around py-4 md:py-10 bg-gradient-to-r from-blue-500/10 to-purple-500/10">
+                {/* <div className="flex flex-col md:flex-row text-xl md:text-5xl justify-around py-4 md:py-10 bg-gradient-to-r from-blue-500/10 to-purple-500/10">
                     <div className="text-center md:text-left mb-2 md:mb-0">LUXURY LIVING STATIC</div>
                     <div className="text-center md:text-right">MODERN LIFESTYLE</div>
-                </div>
+                </div> */}
             </section>
         </>
     );

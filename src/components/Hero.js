@@ -80,7 +80,7 @@ const Hero = () => {
                 ) : (
                     <img
                         src={fallbackImage}
-                        alt="Lakshmi Nilayam"
+                        alt="Laxmi Nilayam"
                         className="w-full h-full" // Remove object-cover for mobile screens
                     />
                 )}
@@ -88,7 +88,7 @@ const Hero = () => {
             </div>
 
             {/* Content - Repositioned */}
-            <div className="hidden md:block relative text-white text-center z-10 space-y-6 px-4 max-w-4xl mx-auto">
+            <div className="hidden merriweather md:block relative text-white text-center z-10 space-y-6 px-4 max-w-4xl mx-auto">
                 <motion.h1
                     initial={{ y: -50, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
@@ -97,7 +97,7 @@ const Hero = () => {
                 >
                     Welcome to{' '}
                     <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-blue-100 to-purple-100">
-                        Lakshmi Nilayam
+                        Laxmi Nilayam
                     </span>
                 </motion.h1>
             </div>

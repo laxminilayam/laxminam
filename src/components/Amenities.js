@@ -33,7 +33,7 @@ const Amenities = () => {
                 </motion.div>
 
                 {/* Amenities List */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:flex lg:flex-wrap lg:justify-center gap-8">
                     {/* Swimming Pool */}
                     <AmenityCard
                         title="Swimming Pool"

@@ -132,8 +132,8 @@ const PrivacyPolicy = () => {
                         <p>If you have any questions or concerns about this Privacy Policy, feel free to reach out to us:</p>
                         <p><strong>📍 Laxmi Nilayam</strong><br />D.No 272 & 273, Logos Public School Lane,<br />Syamalanagar Extension, Guntur – 522006</p>
                         <p><strong>📞 Phone:</strong> 94409 96805</p>
-                        <p><strong>💌 Gmail:</strong> [Your Email]</p>
-                        <p><strong>🌐 Website:</strong> [Your Website]</p>
+                        {/* <p><strong>💌 Gmail:</strong> [Your Email]</p> */}
+                        <p><strong>🌐 Website:</strong> https://www.laxminilayam.com</p>
                     </section>
                 </div>
 

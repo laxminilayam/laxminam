@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const Contact = () => {
     return (
@@ -54,7 +55,7 @@ const Contact = () => {
                     >
                         <h3 className="text-3xl font-bold text-blue-700 mb-4">Call Now:</h3>
                         <p className="text-gray-600 font-merriweather">
-                            Phone: +91 94409 96805<br />
+                            Phone: +91 70751 55555<br />
 
                         </p>
 
@@ -64,8 +65,20 @@ const Contact = () => {
                     </motion.div>
                 </div>
 
-                {/* Contact Form */}
-
+                {/* Privacy Policy Link */}
+                <motion.div
+                    className="text-center mt-8"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5, delay: 0.4 }}
+                >
+                    <Link
+                        to="/privacy-policy"
+                        className="text-blue-600 hover:text-blue-800 underline font-medium"
+                    >
+                        Privacy Policy
+                    </Link>
+                </motion.div>
             </div>
         </section>
     );

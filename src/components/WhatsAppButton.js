@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const WhatsAppButton = () => {
     const [isHovered, setIsHovered] = useState(false);
-    const whatsappNumber = "+917075155555"; // Replace with your WhatsApp number
+    const whatsappNumber = "+919440996805"; // Replace with your WhatsApp number
 
     return (
         <motion.a

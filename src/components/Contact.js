@@ -1,16 +1,17 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { MapPinIcon, PhoneIcon } from '@heroicons/react/24/outline';
 
 const Contact = () => {
     return (
-        <section id="contact" className="py-20 relative overflow-hidden bg-gradient-to-b from-blue-100 to-purple-100 text-gray-900">
+        <section id="contact" className="py-20 relative overflow-hidden bg-white text-gray-900">
             {/* Background Effects */}
-            <div className="absolute inset-0 opacity-30">
+            {/* <div className="absolute inset-0 opacity-30">
                 <div className="absolute top-0 left-0 w-72 h-72 bg-yellow-200 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
                 <div className="absolute top-0 right-0 w-72 h-72 bg-green-200 rounded-full mix-blend-multiply filter blur-xl animation-delay-2000"></div>
                 <div className="absolute bottom-0 left-20 w-72 h-72 bg-red-200 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div>
-            </div>
+            </div> */}
 
             <div className="container mx-auto px-4 relative">
                 {/* Contact Section */}
@@ -36,14 +37,15 @@ const Contact = () => {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
                     >
-                        <h3 className="text-3xl font-bold text-blue-700 mb-4">Location:</h3>
-                        <p className="text-gray-600 font-merriweather mb-4">
+                        <div className="flex items-center mb-4">
+                            <MapPinIcon className="w-6 h-6 text-blue-700 mr-2" />
+                            <h3 className="text-3xl font-bold text-blue-700">Location:</h3>
+                        </div>
+                        <p className="text-gray-600 font-merriweather mb-4 pl-8">
                             Your Dream home Awaits at<br />
                             Lakshmi Nilayam<br />
                             D.No 272 & 273, Logos Public School Lane, Syamalanagar Extension, Guntur – 522006
                         </p>
-
-
                     </motion.div>
 
                     {/* Google Maps */}
@@ -53,13 +55,15 @@ const Contact = () => {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
                     >
-                        <h3 className="text-3xl font-bold text-blue-700 mb-4">Call Now:</h3>
-                        <p className="text-gray-600 font-merriweather">
+                        <div className="flex items-center mb-4">
+                            <PhoneIcon className="w-6 h-6 text-blue-700 mr-2" />
+                            <h3 className="text-3xl font-bold text-blue-700">Call Now:</h3>
+                        </div>
+                        <p className="text-gray-600 font-merriweather pl-8">
                             Phone: +91 94409 96805<br />
-
                         </p>
 
-                        <p className="mt-6 text-gray-600 font-merriweather">
+                        <p className="mt-6 text-gray-600 font-merriweather pl-8">
                             Lakshmi Nilayam – Where dreams come to life, and every day feels like a celebration.
                         </p>
                     </motion.div>

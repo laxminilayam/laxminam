@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { XMarkIcon } from '@heroicons/react/24/outline';
 import one from '../assets/one.jpg';
 import two from '../assets/two.jpg';
 import three from '../assets/three.jpg';
@@ -11,6 +12,12 @@ import seven from '../assets/seven.jpg';
 import eight from '../assets/eight.jpeg';
 import nine from '../assets/nine.jpg';
 import ten from '../assets/ten.jpg';
+import eleven from'../assets/one_1.jpg';
+import twelve from'../assets/two_2.jpg';
+import thirteen from'../assets/three_3.jpg';
+import fourteen from'../assets/four_4.jpg';
+import fifteen from'../assets/five_5.jpg';
+
 
 const Gallery = () => {
     const [selectedImage, setSelectedImage] = useState(null);
@@ -34,16 +41,16 @@ const Gallery = () => {
             id: 1,
             image: one,
             title: "Modern Facade",
-            description: "Contemporary architectural design with premium finishes",
+            description: "Elegant modern facade featuring clean lines and contemporary architectural elements",
             category: "exterior",
             size: "large",
-            aspectRatio: "square" // Added aspect ratio property
+            aspectRatio: "square"
         },
         {
             id: 2,
             image: two,
             title: "Luxurious Living Room",
-            description: "Spacious living area with premium interiors",
+            description: "Sophisticated living space with high-end furnishings and ambient lighting",
             category: "interior",
             size: "medium",
             aspectRatio: "square"
@@ -52,7 +59,7 @@ const Gallery = () => {
             id: 3,
             image: three,
             title: "Bedroom",
-            description: "Modern modular Bedroom with premium fittings",
+            description: "Serene bedroom space with stylish decor and comfortable furnishings",
             category: "interior",
             size: "medium",
             aspectRatio: "square"
@@ -61,24 +68,24 @@ const Gallery = () => {
             id: 4,
             image: four,
             title: "Swimming Pool",
-            description: "Spacious Swimming Pool with premium finishes",
+            description: "Resort-style swimming pool with elegant poolside features and lounging areas",
             category: "amenities",
-            size: "vertical", // Changed size for vertical images
+            size: "vertical",
             aspectRatio: "portrait"
         },
         {
             id: 5,
             image: five,
             title: "Premium Rooms",
-            description: "Luxury House with modern fittings",
-            category: "",
+            description: "Upscale rooms featuring premium finishes and luxurious amenities",
+            category: "interior",
             size: "small"
         },
         {
             id: 6,
             image: six,
             title: "Building Exterior",
-            description: "Magnificent architecture with modern design",
+            description: "Stunning architectural facade with modern design elements and premium materials",
             category: "exterior",
             size: "vertical",
             aspectRatio: "portrait"
@@ -87,7 +94,7 @@ const Gallery = () => {
             id: 7,
             image: seven,
             title: "Community Area",
-            description: "Spacious community spaces for residents",
+            description: "Welcoming community spaces designed for resident gatherings and social interactions",
             category: "interior",
             size: "medium"
         },
@@ -95,7 +102,7 @@ const Gallery = () => {
             id: 8,
             image: eight,
             title: "Construction Progress",
-            description: "Latest construction updates",
+            description: "Ongoing construction showcasing quality craftsmanship and attention to detail",
             category: "construction",
             size: "vertical",
             aspectRatio: "portrait"
@@ -104,15 +111,57 @@ const Gallery = () => {
             id: 9,
             image: nine,
             title: "Hall",
-            description: "Beautifully designed hall with modern interiors",
+            description: "Expansive hall featuring elegant design and premium finishing touches",
             category: "interior",
             size: "medium"
         },
         {
             id: 10,
             image: ten,
-            title: "Master BedRoom",
-            description: "Master BedRoom property",
+            title: "Master Bedroom",
+            description: "Luxurious master bedroom with sophisticated design and premium amenities",
+            category: "interior",
+            size: "large"
+        },
+        {
+            id: 11,
+            image: eleven,
+            title: "Hall",
+            description: "Spacious hall with modern aesthetics and premium materials",
+            category: "interior",
+            size: "medium"
+        },
+        {
+            id: 12,
+            image: twelve,
+            title: "Dining table area",
+            description: "Elegant dining area with premium furnishings and ambient lighting",
+            category: "interior",
+            size: "medium"
+        },
+        {
+            id: 13,
+            image: thirteen,
+            title: "Kitchen",
+            description: "Modern kitchen featuring high-end appliances and elegant cabinetry",
+            category: "interior",
+            size: "vertical",
+            aspectRatio: "portrait"
+        },
+        {
+            id: 14,
+            image: fourteen,
+            title: "Building Exterior",
+            description: "Impressive exterior architecture with contemporary design elements",
+            category: "exterior",
+            size: "vertical",
+            aspectRatio: "portrait"
+        },
+        {
+            id: 15,
+            image: fifteen,
+            title: "Bedroom",
+            description: "Elegant bedroom design with premium furnishings and peaceful ambiance",
             category: "interior",
             size: "large"
         }
@@ -224,6 +273,19 @@ const Gallery = () => {
                                 className="relative w-full max-w-4xl bg-black rounded-lg overflow-hidden"
                                 onClick={e => e.stopPropagation()}
                             >
+                                {/* Close Button */}
+                                <motion.button
+                                    className="absolute top-3 right-3 z-10 p-2 rounded-full bg-white/20 hover:bg-white/30 text-white transition-colors duration-200"
+                                    onClick={() => setSelectedImage(null)}
+                                    whileHover={{ scale: 1.1 }}
+                                    whileTap={{ scale: 0.9 }}
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    transition={{ delay: 0.2 }}
+                                >
+                                    <XMarkIcon className="w-6 h-6" />
+                                </motion.button>
+                                
                                 <img
                                     src={selectedImage.image}
                                     alt={selectedImage.title}

@@ -177,7 +177,7 @@ const About = () => {
             <Banner />
             <section id="about" className="py-8 md:py-20 -top-12 md:-top-20 relative overflow-hidden">
                 {/* Background decoration */}
-                <motion.div
+                {/* <motion.div
                     className="absolute inset-0 opacity-10"
                     style={{
                         backgroundImage: `url(${bg})`,
@@ -185,7 +185,7 @@ const About = () => {
                         backgroundPosition: "center",
                         backgroundRepeat: "no-repeat"
                     }}
-                />
+                /> */}
 
                 {/* Main content */}
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -355,15 +355,15 @@ const About = () => {
                         {/* Enhanced Mission & Values Section */}
                         <motion.div
                             variants={fadeIn}
-                            className="relative bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50 rounded-xl md:rounded-3xl p-4 md:p-16 mt-8 md:mt-12 overflow-hidden"
+                            className="relative bg-white rounded-xl md:rounded-3xl p-4 md:p-16 mt-8 md:mt-12 overflow-hidden"
                         >
                             {/* Animated background patterns */}
-                            <motion.div
+                            {/* <motion.div
                                 className="absolute inset-0"
                                 style={{
                                     backgroundImage: 'radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(147, 51, 234, 0.1) 0%, transparent 50%)'
                                 }}
-                            />
+                            /> */}
 
                             {/* Mission Section */}
                             <div className="relative z-10 mb-8 md:mb-16">

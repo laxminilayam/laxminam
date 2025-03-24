@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import swimmingPool from '../assets/four.jpg';
 import totLots from '../assets/one_three.jpeg';
 import multiPurposeHall from '../assets/one_two.jpeg';
@@ -8,14 +8,24 @@ import indoorGames from '../assets/susix.jpg';
 import IlluminatedCard from './IlluminatedCard';
 
 const Amenities = () => {
+    const [zoomedImage, setZoomedImage] = useState(null);
+
+    const handleImageClick = (image, title, description) => {
+        setZoomedImage({ image, title, description });
+    };
+
+    const closeZoomedImage = () => {
+        setZoomedImage(null);
+    };
+
     return (
-        <section id="amenities" className="py-20 relative overflow-hidden bg-gradient-to-b from-blue-100 to-purple-100 text-gray-900">
+        <section id="amenities" className="py-20 relative overflow-hidden bg-white text-gray-900">
             {/* Background Effects */}
-            <div className="absolute inset-0 opacity-30">
+            {/* <div className="absolute inset-0 opacity-30">
                 <div className="absolute top-0 left-0 w-72 h-72 bg-yellow-200 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
                 <div className="absolute top-0 right-0 w-72 h-72 bg-green-200 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
                 <div className="absolute bottom-0 left-20 w-72 h-72 bg-red-200 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div>
-            </div>
+            </div> */}
 
             <div className="container mx-auto px-4 relative">
                 {/* Amenities Section */}
@@ -39,6 +49,7 @@ const Amenities = () => {
                         title="Swimming Pool"
                         description="A crystal-clear oasis for relaxation and fun."
                         image={swimmingPool}
+                        onClick={handleImageClick}
                     />
 
                     {/* Tot Lots */}
@@ -46,6 +57,7 @@ const Amenities = () => {
                         title="Playground"
                         description="Safe, engaging spaces for your little ones to play and explore."
                         image={totLots}
+                        onClick={handleImageClick}
                     />
 
                     {/* Multi-Purpose Halls */}
@@ -53,6 +65,7 @@ const Amenities = () => {
                         title="Multi-Purpose Halls"
                         description="Perfect for gatherings, celebrations, and events."
                         image={multiPurposeHall}
+                        onClick={handleImageClick}
                     />
 
                     {/* Gymnasium */}
@@ -60,6 +73,7 @@ const Amenities = () => {
                         title="Gymnasium"
                         description="Stay fit with our fully-equipped fitness center."
                         image={gymnasium}
+                        onClick={handleImageClick}
                     />
 
                     {/* Indoor Games & Billiards Table */}
@@ -67,17 +81,18 @@ const Amenities = () => {
                         title="Indoor Games & Billiards Table"
                         description="Let the fun never end with entertainment for all ages."
                         image={indoorGames}
+                        onClick={handleImageClick}
                     />
                 </div>
 
                 {/* Built to Last Section */}
                 <motion.div
-                    className="mt-16 p-8 rounded-2xl bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50 backdrop-blur-md shadow-lg"
+                    className="mt-16 p-8 rounded-2xl bg-white"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
                 >
-                    <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 mb-8 text-center">
+                    <h2 className="text-3xl font-bold bg-clip-text bg-white mb-8 text-center">
                         Built to Last, Designed for You
                     </h2>
 
@@ -209,21 +224,61 @@ const Amenities = () => {
                         nothing short of excellence.
                     </p>
                 </motion.div>
+
+                {/* Zoomed Image Modal */}
+                <AnimatePresence>
+                    {zoomedImage && (
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-75"
+                            onClick={closeZoomedImage}
+                        >
+                            <motion.div
+                                className="relative max-w-5xl w-full overflow-hidden"
+                                initial={{ scale: 0.8 }}
+                                animate={{ scale: 1 }}
+                                exit={{ scale: 0.8 }}
+                                onClick={e => e.stopPropagation()}
+                            >
+                                <img
+                                    src={zoomedImage.image}
+                                    alt={zoomedImage.title}
+                                    className="w-full h-auto max-h-[80vh] object-contain"
+                                />
+                                <div className="absolute bottom-0 left-0 right-0 p-6 bg-black bg-opacity-60">
+                                    <h3 className="text-2xl font-semibold text-white mb-2">{zoomedImage.title}</h3>
+                                    <p className="text-gray-200">{zoomedImage.description}</p>
+                                </div>
+                                <button
+                                    onClick={closeZoomedImage}
+                                    className="absolute top-4 right-4 p-2 text-white hover:text-gray-300"
+                                >
+                                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </button>
+                            </motion.div>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
             </div>
         </section>
     );
 };
 
-const AmenityCard = ({ title, description, image }) => {
+const AmenityCard = ({ title, description, image, onClick }) => {
     return (
         <motion.div
-            className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+            className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer"
             whileHover={{ scale: 1.05 }}
+            onClick={() => onClick(image, title, description)}
         >
             <img
                 src={image}
                 alt={title}
-                className="w-full h-64 object-cover"
+                className="w-full h-64 object-cover transition-transform duration-700 ease-in-out group-hover:scale-110 hover:scale-110"
             />
             <div className="absolute inset-0 bg-black bg-opacity-40">
                 <div className="p-6">

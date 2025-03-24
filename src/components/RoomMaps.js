@@ -164,35 +164,23 @@ const RoomMaps = () => {
                             exit={{ scale: 0.8 }}
                             onClick={e => e.stopPropagation()}
                         >
-                            <div className="grid md:grid-cols-2 gap-6">
+                            <div className="relative">
                                 {/* Image Section */}
-                                <div className="relative aspect-w-16 aspect-h-12">
+                                <div className="relative h-[90vh]">
                                     <img
                                         src={zoomedPlan.image}
                                         alt={zoomedPlan.title}
-                                        className="w-full h-full object-cover max-w-full max-h-screen"
+                                        className="w-full h-full"
                                     />
                                 </div>
-
-                                {/* Details Section */}
-                                <div className="p-6 space-y-6">
-                                    <div>
-                                        <h3 className="text-3xl font-bold text-white mb-2">
-                                            {zoomedPlan.title}
-                                        </h3>
-                                        <p className="text-blue-400 text-xl">{zoomedPlan.description}</p>
-                                    </div>
-
-                                    {/* Close Button */}
                                     <button
                                         onClick={closeZoomedPlan}
-                                        className="absolute top-4 right-4 p-2 text-gray-400 hover:text-white"
+                                        className="absolute top-4 right-4 p-2 text-gray-400 hover:text-black"
                                     >
                                         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
                                         </svg>
                                     </button>
-                                </div>
                             </div>
                         </motion.div>
                     </motion.div>

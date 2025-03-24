@@ -15,6 +15,7 @@ import ButtonGroup from "./components/ButtonGroup";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import ScrollToTop from "./components/ScrollToTop";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 const AppContent = () => {
   const location = useLocation();
@@ -28,7 +29,7 @@ const AppContent = () => {
         <Route path="/" element={
           <>
             <Hero />
-            <About />
+            <About /> 
             <FloorPlans />
             <RoomMaps />
             <Amenities />
@@ -40,6 +41,7 @@ const AppContent = () => {
         } />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
+      <ScrollToTopButton />
     </div>
   );
 };

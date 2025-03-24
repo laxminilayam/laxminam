@@ -1,11 +1,9 @@
 import React from 'react';
-import WhatsAppButton from './WhatsAppButton';
 import DownloadBrochure from './DownloadBrochure';
 
 const ButtonGroup = () => {
     return (
-        <div className="fixed bottom-8 right-8 z-50 flex items-center gap-4">
-            <WhatsAppButton />
+        <div className="fixed bottom-8 right-24 z-50 flex items-center gap-4">
             <DownloadBrochure />
         </div>
     );

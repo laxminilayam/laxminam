@@ -3,14 +3,14 @@ import { motion } from 'framer-motion';
 
 const WhatsAppButton = () => {
     const [isHovered, setIsHovered] = useState(false);
-    const whatsappNumber = "+919440996805"; // Replace with your WhatsApp number
+    const whatsappNumber = "9440996805"; // Replace with your WhatsApp number
 
     return (
         <motion.a
             href={`https://wa.me/${whatsappNumber}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 bg-green-500 text-white px-4 py-3 rounded-full shadow-lg"
+            className="flex items-center gap-2 bg-white text-green-600 border border-green-600 px-4 py-3 rounded-full shadow-lg"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onHoverStart={() => setIsHovered(true)}
@@ -28,7 +28,7 @@ const WhatsAppButton = () => {
 
             {/* Hover effect */}
             <motion.div
-                className="absolute inset-0 rounded-full bg-white opacity-0"
+                className="absolute inset-0 rounded-full bg-green-50 opacity-0"
                 animate={{
                     opacity: isHovered ? 0.2 : 0
                 }}

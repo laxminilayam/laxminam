@@ -8,7 +8,7 @@ const DownloadBrochure = () => {
 
     const handleDownload = () => {
         // Replace with your actual brochure PDF URL
-        const brochureUrl = 'https://drive.google.com/file/d/1-3qMViS8RAubt1eJ48qWz_4V6i-0if6r/view?usp=sharing';
+        const brochureUrl = 'https://drive.google.com/file/d/114mE3lUhqYCOoucijP97lYbPm1B0hRNQ/view?usp=sharing';
 
         // Animated feedback
         setShowTooltip(true);

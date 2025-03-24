@@ -198,7 +198,7 @@ const Amenities = () => {
                                         </motion.ul>
 
                                         <motion.div
-                                            className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                                            className="absolute inset-0 rounded-xl"
                                             initial={false}
                                             animate={{ scale: [0.95, 1] }}
                                             transition={{ duration: 0.3 }}

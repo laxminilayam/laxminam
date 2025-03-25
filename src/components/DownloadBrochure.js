@@ -26,7 +26,7 @@ const DownloadBrochure = () => {
     return (
         <>
             <motion.button
-                className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-3 rounded-full shadow-lg group"
+                className="flex items-center gap-2 bg-gradient-to-r from-[#F8D1D0] to-[#EB6484] text-white px-4 py-3 rounded-full shadow-lg group"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onHoverStart={() => setIsHovered(true)}

@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 
 const Banner = () => {
     return (
-        <div className="relative merriweather overflow-hidden bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div className="relative merriweather overflow-hidden bg-gradient-to-r from-[#F8D1D0] to-[#EB6484] text-white">
             <div className="absolute inset-0">
                 <div className="absolute inset-0 bg-black opacity-50"></div>
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600/30 to-purple-600/30"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-[#F8D1D0] to-[#EB6484] "></div>
             </div>
 
             <div className="relative max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:px-8">

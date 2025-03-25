@@ -9,8 +9,8 @@ import one from "../assets/suone.jpg";
 import two from "../assets/sutwo.jpg";
 import three from "../assets/suthree.jpg";
 import four from "../assets/sufour.jpg";
-import five from "../assets/sufive.jpg";
-import six from "../assets/susix.jpg";
+// import five from "../assets/sufive.jpg";
+// import six from "../assets/susix.jpg";
 import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
 
@@ -51,11 +51,11 @@ const RoomMaps = () => {
             image: four,
             description: ""
         },
-        {
-            title: "",
-            image: five,
-            description: ""
-        }
+        // {
+        //     title: "",
+        //     image: five,
+        //     description: ""
+        // }
     ];
 
     return (
@@ -154,11 +154,11 @@ const RoomMaps = () => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-75"
+                        className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-90 overflow-y-auto"
                         onClick={closeZoomedPlan}
                     >
                         <motion.div
-                            className="relative max-w-4xl w-full bg-gray-900/80 backdrop-blur-xl rounded-2xl overflow-hidden border border-white/10"
+                            className="relative max-w-5xl w-full bg-gray-900/80 backdrop-blur-xl rounded-2xl overflow-hidden border border-white/10"
                             initial={{ scale: 0.8 }}
                             animate={{ scale: 1 }}
                             exit={{ scale: 0.8 }}
@@ -166,21 +166,22 @@ const RoomMaps = () => {
                         >
                             <div className="relative">
                                 {/* Image Section */}
-                                <div className="relative h-[90vh]">
+                                <div className="relative max-h-[85vh] overflow-y-auto">
                                     <img
                                         src={zoomedPlan.image}
                                         alt={zoomedPlan.title}
-                                        className="w-full h-full"
+                                        className="w-full h-auto object-contain"
                                     />
                                 </div>
-                                    <button
-                                        onClick={closeZoomedPlan}
-                                        className="absolute top-4 right-4 p-2 text-gray-400 hover:text-black"
-                                    >
-                                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-                                        </svg>
-                                    </button>
+                                <button
+                                    onClick={closeZoomedPlan}
+                                    className="absolute top-4 right-4 p-2 bg-black/20 backdrop-blur-sm rounded-full text-black hover:bg-white hover:text-black transition-colors duration-200"
+                                    aria-label="Close"
+                                >
+                                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </button>
                             </div>
                         </motion.div>
                     </motion.div>

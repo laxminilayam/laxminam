@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import swimmingPool from '../assets/four.jpg';
-import totLots from '../assets/one_three.jpeg';
-import multiPurposeHall from '../assets/one_two.jpeg';
-import gymnasium from '../assets/sueight.jpg';
-import indoorGames from '../assets/susix.jpg';
+import swimmingPool from '../assets/am6.jpg';
+import totLots from '../assets/am4.jpg';
+import multiPurposeHall from '../assets/am3.jpg';
+import gymnasium from '../assets/am5.jpg';
+import indoorGames from '../assets/am1.jpg';
 import IlluminatedCard from './IlluminatedCard';
 
 const Amenities = () => {
@@ -221,7 +221,7 @@ const Amenities = () => {
                                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                                                         </svg>
                                                     </span>
-                                                    <span className="text-gray-700 font-merriweather">{item}</span>
+                                                    <span className="text-gray-700 ">{item}</span>
                                                 </motion.li>
                                             ))}
                                         </motion.ul>
@@ -247,7 +247,7 @@ const Amenities = () => {
                     transition={{ duration: 0.5, delay: 0.4 }}
                 >
                     <h2 className="text-3xl font-bold text-blue-700">Come, Discover the Joy of Living at Lakshmi Nilayam</h2>
-                    <p className="mt-4 text-gray-600 text-lg font-merriweather">
+                    <p className="mt-4 text-gray-600 text-lg">
                         Lakshmi Nilayam is more than just a place to live—it’s a place to thrive. Your dream home
                         awaits in the heart of Guntur. Make the move today and embrace a lifestyle that offers
                         nothing short of excellence.
@@ -312,7 +312,7 @@ const AmenityCard = ({ title, description, image, onClick }) => {
             <div className="absolute inset-0 bg-black bg-opacity-40">
                 <div className="p-6">
                     <h3 className="text-2xl font-semibold text-white mb-2">{title}</h3>
-                    <p className="text-gray-200 font-merriweather">{description}</p>
+                    <p className="text-gray-200">{description}</p>
                 </div>
             </div>
         </motion.div>

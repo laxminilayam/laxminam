@@ -41,7 +41,7 @@ const Contact = () => {
                             <MapPinIcon className="w-6 h-6 text-blue-700 mr-2" />
                             <h3 className="text-3xl font-bold text-blue-700">Location:</h3>
                         </div>
-                        <p className="text-gray-600 font-merriweather mb-4 pl-8">
+                        <p className="text-gray-600 mb-4 pl-8">
                             Your Dream home Awaits at<br />
                             Lakshmi Nilayam<br />
                             D.No 272 & 273, Logos Public School Lane, Syamalanagar Extension, Guntur – 522006
@@ -59,11 +59,11 @@ const Contact = () => {
                             <PhoneIcon className="w-6 h-6 text-blue-700 mr-2" />
                             <h3 className="text-3xl font-bold text-blue-700">Call Now:</h3>
                         </div>
-                        <p className="text-gray-600 font-merriweather pl-8">
+                        <p className="text-gray-600 pl-8">
                             Phone: +91 94409 96805<br />
                         </p>
 
-                        <p className="mt-6 text-gray-600 font-merriweather pl-8">
+                        <p className="mt-6 text-gray-600 pl-8">
                             Lakshmi Nilayam – Where dreams come to life, and every day feels like a celebration.
                         </p>
                     </motion.div>

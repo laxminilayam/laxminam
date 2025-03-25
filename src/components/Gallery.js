@@ -275,7 +275,7 @@ const Gallery = () => {
                             >
                                 {/* Close Button */}
                                 <motion.button
-                                    className="absolute top-3 right-3 z-10 p-2 rounded-full bg-white/20 hover:bg-white/30 text-white transition-colors duration-200"
+                                    className="absolute top-3 right-3 z-10 p-2 rounded-full bg-black/20 hover:bg-black/30 text-black transition-colors duration-200"
                                     onClick={() => setSelectedImage(null)}
                                     whileHover={{ scale: 1.1 }}
                                     whileTap={{ scale: 0.9 }}

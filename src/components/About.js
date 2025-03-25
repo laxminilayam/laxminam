@@ -175,7 +175,7 @@ const About = () => {
     return (
         <>
             <Banner />
-            <section id="about" className="py-8 md:py-20 -top-12 md:-top-20 relative overflow-hidden">
+            <section id="about" className=" relative overflow-hidden">
                 {/* Background decoration */}
                 {/* <motion.div
                     className="absolute inset-0 opacity-10"
@@ -188,7 +188,7 @@ const About = () => {
                 /> */}
 
                 {/* Main content */}
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+                <div className="max-w-7xl mx-auto relative">
                     <motion.div
                         ref={ref}
                         initial="hidden"

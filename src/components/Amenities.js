@@ -97,68 +97,97 @@ const Amenities = () => {
                     </h2>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {[
-                            {
-                                title: "Structural Excellence",
-                                icon: "🏗️",
-                                items: [
-                                    "R.C.C. framed structure",
-                                    "Seismic load resistance",
-                                    "9-inch thick external walls",
-                                    "Superior insulation"
-                                ]
-                            },
-                            {
-                                title: "Premium Finishes",
-                                icon: "🎨",
-                                items: [
-                                    "High-quality exterior paint",
-                                    "Elegant interior finishes",
-                                    "Designer wall textures",
-                                    "Weather-resistant coating"
-                                ]
-                            },
-                            {
-                                title: "Doors & Windows",
-                                icon: "🚪",
-                                items: [
-                                    "Teak wood main doors",
-                                    "Smooth-finished internal doors",
-                                    "PVC/UPVC windows",
-                                    "Designer hardware fittings"
-                                ]
-                            },
-                            {
-                                title: "Flooring & Tiles",
-                                icon: "✨",
-                                items: [
-                                    "Vitrified tiles in living areas",
-                                    "Anti-skid bathroom tiles",
-                                    "Acid-resistant kitchen tiles",
-                                    "Premium marble in common areas"
-                                ]
-                            },
-                            {
-                                title: "Kitchen Excellence",
-                                icon: "🍳",
-                                items: [
-                                    "Granite countertops",
-                                    "Stainless steel sink",
-                                    "Water purifier provision",
-                                    "Modular kitchen setup"
-                                ]
-                            },
-                            {
-                                title: "Utility & Convenience",
-                                icon: "🔧",
-                                items: [
-                                    "Washing machine area",
-                                    "Dedicated wet kitchen space",
-                                    "Utility balcony",
-                                    "Service area provisions"
-                                ]
-                            }
-                        ].map((category, index) => (
+                    {[
+                        {
+                            title: "Structural Excellence",
+                            icon: (
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 22h16v-2H4v2z" fill="blue"/>
+                                    <path d="M6 2h12v14H6V2z" fill="blue"/>
+                                </svg>
+                            ),
+                            items: [
+                                "R.C.C. framed structure",
+                                "Seismic load resistance",
+                                "9-inch thick external walls",
+                                "Superior insulation"
+                            ]
+                        },
+                        {
+                            title: "Premium Finishes",
+                            icon: (
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="12" r="10" stroke="blue" strokeWidth="2"/>
+                                    <path d="M8 12l2 2 4-4" stroke="blue" strokeWidth="2" fill="none"/>
+                                </svg>
+                            ),
+                            items: [
+                                "High-quality exterior paint",
+                                "Elegant interior finishes",
+                                "Designer wall textures",
+                                "Weather-resistant coating"
+                            ]
+                        },
+                        {
+                            title: "Doors & Windows",
+                            icon: (
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="4" y="4" width="16" height="16" stroke="blue" strokeWidth="2"/>
+                                    <line x1="4" y1="12" x2="20" y2="12" stroke="blue" strokeWidth="2"/>
+                                </svg>
+                            ),
+                            items: [
+                                "Teak wood main doors",
+                                "Smooth-finished internal doors",
+                                "PVC/UPVC windows",
+                                "Designer hardware fittings"
+                            ]
+                        },
+                        {
+                            title: "Flooring & Tiles",
+                            icon: (
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="3" y="3" width="18" height="18" stroke="blue" strokeWidth="2"/>
+                                    <path d="M3 9h18M9 3v18" stroke="blue" strokeWidth="2"/>
+                                </svg>
+                            ),
+                            items: [
+                                "Vitrified tiles in living areas",
+                                "Anti-skid bathroom tiles",
+                                "Acid-resistant kitchen tiles",
+                                "Premium marble in common areas"
+                            ]
+                        },
+                        {
+                            title: "Kitchen Excellence",
+                            icon: (
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 4h16v16H4V4z" stroke="blue" strokeWidth="2"/>
+                                    <rect x="8" y="8" width="8" height="8" fill="blue"/>
+                                </svg>
+                            ),
+                            items: [
+                                "Granite countertops",
+                                "Stainless steel sink",
+                                "Water purifier provision",
+                                "Modular kitchen setup"
+                            ]
+                        },
+                        {
+                            title: "Utility & Convenience",
+                            icon: (
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 12h20" stroke="blue" strokeWidth="2"/>
+                                    <path d="M12 2v20" stroke="blue" strokeWidth="2"/>
+                                </svg>
+                            ),
+                            items: [
+                                "Washing machine area",
+                                "Dedicated wet kitchen space",
+                                "Utility balcony",
+                                "Service area provisions"
+                            ]
+                    }].map((category, index) => (
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, y: 20 }}
@@ -172,7 +201,7 @@ const Amenities = () => {
                                         className="space-y-4"
                                     >
                                         <div className="flex items-center space-x-3 mb-4">
-                                            <span className="text-2xl">{category.icon}</span>
+                                            {category.icon}
                                             <h3 className="text-xl font-semibold text-gray-800">
                                                 {category.title}
                                             </h3>

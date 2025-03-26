@@ -21,10 +21,10 @@ const Contact = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                 >
-                    <h2 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-800">
+                    <h2 className="text-4xl font-bold text-[#EB6484]">
                         Contact Us
                     </h2>
-                    <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-800 mx-auto mt-4 rounded-full"></div>
+                    <div className="w-24 h-1 bg-gradient-to-r from-[#F8D1D0] to-[#EB6484] mx-auto mt-4 rounded-full"></div>
                     <p className="mt-4 text-gray-700 text-lg">Your Journey to Lakshmi Nilayam Starts Here</p>
                 </motion.div>
 
@@ -38,8 +38,8 @@ const Contact = () => {
                         transition={{ duration: 0.5, delay: 0.2 }}
                     >
                         <div className="flex items-center mb-4">
-                            <MapPinIcon className="w-6 h-6 text-blue-700 mr-2" />
-                            <h3 className="text-3xl font-bold text-blue-700">Location:</h3>
+                            <MapPinIcon className="w-6 h-6 text-[#EB6484] mr-2" />
+                            <h3 className="text-3xl font-bold text-[#EB6484]">Location:</h3>
                         </div>
                         <p className="text-gray-600 mb-4 pl-8">
                             Your Dream home Awaits at<br />
@@ -56,8 +56,8 @@ const Contact = () => {
                         transition={{ duration: 0.5, delay: 0.2 }}
                     >
                         <div className="flex items-center mb-4">
-                            <PhoneIcon className="w-6 h-6 text-blue-700 mr-2" />
-                            <h3 className="text-3xl font-bold text-blue-700">Call Now:</h3>
+                            <PhoneIcon className="w-6 h-6 text-[#EB6484] mr-2" />
+                            <h3 className="text-3xl font-bold text-[#EB6484]">Call Now:</h3>
                         </div>
                         <p className="text-gray-600 pl-8">
                             Phone: +91 94409 96805<br />
@@ -78,8 +78,8 @@ const Contact = () => {
                 >
                     <Link
                         to="/privacy-policy"
-                        className="text-blue-600 hover:text-blue-800 underline font-medium"
-                    >
+                        className="text-[#EB6484] underline font-medium"
+                    > 
                         Privacy Policy
                     </Link>
                 </motion.div>

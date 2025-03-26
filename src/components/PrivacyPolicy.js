@@ -67,7 +67,7 @@ const PrivacyPolicy = () => {
             transition={{ duration: 0.5 }}
         >
             <div className="max-w-4xl mx-auto">
-                <h1 className="text-4xl font-bold mb-8 text-blue-700">Privacy Policy</h1>
+                <h1 className="text-4xl font-bold mb-8 text-gradient-to-r from-[#F8D1D0] to-[#EB6484]">Privacy Policy</h1>
 
                 <div className="prose prose-lg">
                     <p className="mb-4">Welcome to Laxmi Nilayam</p>
@@ -140,7 +140,7 @@ const PrivacyPolicy = () => {
                 <div className="mt-8">
                     <Link
                         to="/"
-                        className="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                        className="inline-block bg-gradient-to-r from-[#F8D1D0] to-[#EB6484] text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
                     >
                         Back to Home
                     </Link>

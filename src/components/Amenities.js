@@ -102,8 +102,8 @@ const Amenities = () => {
                             title: "Structural Excellence",
                             icon: (
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4 22h16v-2H4v2z" fill="blue"/>
-                                    <path d="M6 2h12v14H6V2z" fill="blue"/>
+                                    <path d="M4 22h16v-2H4v2z" fill="#EB6484"/>
+                                    <path d="M6 2h12v14H6V2z" fill="#EB6484"/>
                                 </svg>
                             ),
                             items: [
@@ -117,8 +117,8 @@ const Amenities = () => {
                             title: "Premium Finishes",
                             icon: (
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="12" cy="12" r="10" stroke="blue" strokeWidth="2"/>
-                                    <path d="M8 12l2 2 4-4" stroke="blue" strokeWidth="2" fill="none"/>
+                                    <circle cx="12" cy="12" r="10" stroke="#EB6484" strokeWidth="2"/>
+                                    <path d="M8 12l2 2 4-4" stroke="#EB6484" strokeWidth="2" fill="none"/>
                                 </svg>
                             ),
                             items: [
@@ -132,8 +132,8 @@ const Amenities = () => {
                             title: "Doors & Windows",
                             icon: (
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect x="4" y="4" width="16" height="16" stroke="blue" strokeWidth="2"/>
-                                    <line x1="4" y1="12" x2="20" y2="12" stroke="blue" strokeWidth="2"/>
+                                    <rect x="4" y="4" width="16" height="16" stroke="#EB6484" strokeWidth="2"/>
+                                    <line x1="4" y1="12" x2="20" y2="12" stroke="#EB6484" strokeWidth="2"/>
                                 </svg>
                             ),
                             items: [
@@ -147,8 +147,8 @@ const Amenities = () => {
                             title: "Flooring & Tiles",
                             icon: (
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect x="3" y="3" width="18" height="18" stroke="blue" strokeWidth="2"/>
-                                    <path d="M3 9h18M9 3v18" stroke="blue" strokeWidth="2"/>
+                                    <rect x="3" y="3" width="18" height="18" stroke="#EB6484" strokeWidth="2"/>
+                                    <path d="M3 9h18M9 3v18" stroke="#EB6484" strokeWidth="2"/>
                                 </svg>
                             ),
                             items: [
@@ -162,8 +162,8 @@ const Amenities = () => {
                             title: "Kitchen Excellence",
                             icon: (
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4 4h16v16H4V4z" stroke="blue" strokeWidth="2"/>
-                                    <rect x="8" y="8" width="8" height="8" fill="blue"/>
+                                    <path d="M4 4h16v16H4V4z" stroke="#EB6484" strokeWidth="2"/>
+                                    <rect x="8" y="8" width="8" height="8" fill="#EB6484"/>
                                 </svg>
                             ),
                             items: [
@@ -177,8 +177,8 @@ const Amenities = () => {
                             title: "Utility & Convenience",
                             icon: (
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M2 12h20" stroke="blue" strokeWidth="2"/>
-                                    <path d="M12 2v20" stroke="blue" strokeWidth="2"/>
+                                    <path d="M2 12h20" stroke="#EB6484" strokeWidth="2"/>
+                                    <path d="M12 2v20" stroke="#EB6484" strokeWidth="2"/>
                                 </svg>
                             ),
                             items: [
@@ -216,7 +216,7 @@ const Amenities = () => {
                                                     transition={{ delay: itemIndex * 0.1 }}
                                                     className="flex items-start space-x-2"
                                                 >
-                                                    <span className="text-blue-500 mt-1">
+                                                    <span className="text-[#EB6484] mt-1">
                                                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                                                         </svg>

@@ -252,6 +252,9 @@ const Amenities = () => {
                         awaits in the heart of Guntur. Make the move today and embrace a lifestyle that offers
                         nothing short of excellence.
                     </p>
+                    <a href="#enquire">
+                        <button className='font-bold mt-5 hover:bg-white hover:text-black/30 bg-gradient-to-r from-[#F8D1D0] to-[#EB6484] text-white py-2 px-4 rounded-lg'>Enquire Now</button>
+                    </a>
                 </motion.div>
 
                 {/* Zoomed Image Modal */}

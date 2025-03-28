@@ -68,21 +68,6 @@ const Contact = () => {
                         </p>
                     </motion.div>
                 </div>
-
-                {/* Privacy Policy Link */}
-                <motion.div
-                    className="text-center mt-8"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.5, delay: 0.4 }}
-                >
-                    <Link
-                        to="/privacy-policy"
-                        className="text-[#EB6484] underline font-medium"
-                    > 
-                        Privacy Policy
-                    </Link>
-                </motion.div>
             </div>
         </section>
     );

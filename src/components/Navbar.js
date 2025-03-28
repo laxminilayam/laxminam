@@ -15,12 +15,13 @@ const Navbar = () => {
     }, []);
 
     const navItems = [
-        { title: 'Home', href: '#home' },
-        { title: 'About', href: '#about' },
-        { title: 'Gallery', href: '#gallery' },
-        { title: 'Floor Plans', href: '#floor-plans' },
-        { title: 'Amenities', href: '#amenities' },
-        { title: 'Contact', href: '#contact' },
+        { title: 'Home', href: '/' },
+        { title: 'About', href: '/#about' },
+        { title: 'Gallery', href: '/#gallery' },
+        { title: 'Floor Plans', href: '/#floor-plans' },
+        { title: 'Amenities', href: '/#amenities' },
+        { title: 'Blogs', href: '/blog' },
+        { title: 'Contact', href: '/#contact' },
     ];
 
     return (
@@ -36,11 +37,8 @@ const Navbar = () => {
                         whileHover={{ scale: 1.05 }}
                         className="flex-shrink-0"
                     >
-                        <a href="#home" className="flex items-center space-x-1">
+                        <a href="/" className="flex items-center space-x-1">
                             <img src={logo} alt="Logo" className="h-16 w-auto" />
-                            {/* <div className="">
-                                <span className="md:text-2xl text-md font-bold text-blue-600">Lakshmi Nilayam</span>
-                            </div> */}
                         </a>
                     </motion.div>
 

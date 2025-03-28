@@ -62,7 +62,7 @@ const Hero = () => {
             <div className="absolute inset-0">
                 {!videoError ? (
                     <video
-                        ref={videoRef}
+                        ref={videoRef} 
                         autoPlay
                         loop
                         muted={isMuted}

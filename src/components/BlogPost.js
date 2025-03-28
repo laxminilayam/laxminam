@@ -8,21 +8,24 @@ import { Helmet } from 'react-helmet';
 const BlogPost = () => {
   const { id, slug } = useParams();
   const [post, setPost] = useState(null);
+  const [loading, setLoading] = useState(true);
   
   useEffect(() => {
     let currentPost;
     
     if (id) {
-      currentPost = blogPosts.find(post => post.id === parseInt(id));
+      // Don't parse ID as integer since our IDs are strings
+      currentPost = blogPosts.find(post => post.id === id);
     } else if (slug) {
       currentPost = blogPosts.find(post => post.slug === slug);
     }
     
     setPost(currentPost);
+    setLoading(false);
     window.scrollTo(0, 0);
   }, [id, slug]);
 
-  if (!post) {
+  if (loading) {
     return (
       <div className="container mx-auto px-4 py-20 min-h-screen flex items-center justify-center">
         <p className="text-xl">Loading post...</p>
@@ -30,16 +33,32 @@ const BlogPost = () => {
     );
   }
 
+  if (!post) {
+    return (
+      <div className="container mx-auto px-4 py-20 min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold mb-4">Post Not Found</h1>
+          <p className="mb-6">Sorry, we couldn't find the blog post you're looking for.</p>
+          <Link to="/blog" className="inline-flex items-center text-[#EB6484]">
+            <ArrowLeftIcon className="h-5 w-5 mr-2" />
+            Back to Blog
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <>
-      {post.seo && (
-        <Helmet>
-          <title>2 & 3 BHK Gated Community Apartments in Guntur for sale.</title>
-          <meta name="description" content={"2 & 3 BHK Gated Community Apartments in Guntur for sale | Book your dream home now in Lakshmi Nilayam Apartments."} />
-          <meta name="keywords" content={post.tags?.join(', ')} />
-          <meta name="robots" content="index, follow" /> {/* Added meta tag for SEO */}
-        </Helmet>
-      )}
+      <Helmet>
+        <title>{post.seo?.title || post.title}</title>
+        <meta 
+          name="description" 
+          content={post.seo?.description || post.excerpt} 
+        />
+        <meta name="keywords" content={post.tags?.join(', ') || ''} />
+        <meta name="robots" content="index, follow" />
+      </Helmet>
       
       <div className="container mx-auto px-4 py-20 min-h-screen">
         <motion.div

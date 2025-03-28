@@ -6,7 +6,7 @@ export const blogPosts = [
     slug: "2-&-3BHK-Gated-Community-Apartments-in-Guntur",
     content: `
       
-      <p class="mb-6">When it comes to finding the perfect home in Guntur, a <a href="/blog/gated-community-guntur" class="text-[#EB6484] hover:underline">Gated community Apartments in Guntur</a> offers a blend of security, comfort, and convenience. Lakshmi Nilayam stands out as one of the most sought-after residential options in the city. But what makes it the ideal choice for homebuyers and investors? Let's explore the key reasons why Lakshmi Nilayam Gated Community Apartments should be your top pick.</p>
+      <p class="mb-6">When it comes to finding the perfect home in Guntur, a <a href="/blog/2-&-3BHK-Gated-Community-Apartments-in-Guntur" class="text-[#EB6484] hover:underline">Gated community Apartments in Guntur</a> offers a blend of security, comfort, and convenience. Lakshmi Nilayam stands out as one of the most sought-after residential options in the city. But what makes it the ideal choice for homebuyers and investors? Let's explore the key reasons why Lakshmi Nilayam Gated Community Apartments should be your top pick.</p>
       
       <h2 class="text-2xl font-bold mb-4 mt-8">Key Reasons for To choose Lakshmi Nilayam Gated community Apartments in Guntur are:-</h2>
       

@@ -19,16 +19,21 @@ import ScrollToTopButton from "./components/ScrollToTopButton";
 import Footer from "./components/Footer";
 import Blog from "./components/Blog";
 import BlogPost from "./components/BlogPost";
+import Thankyou from "./page/Thankyou";
+import Landing from "./page/Landing";
 
 const AppContent = () => {
   const location = useLocation();
   const isPrivacyPage = location.pathname === '/privacy-policy';
   const isBlogPage = location.pathname.includes('/blog');
+  const isLandingPage = location.pathname === '/land';
+  const isThankYouPage = location.pathname === '/thank-you';
+  const hideNavbarFooter = isLandingPage || isThankYouPage;
 
   return (
     <div className="w-full overflow-hidden bg-white">
       <ScrollToTop />
-      {!isPrivacyPage && <Navbar />}
+      {!isPrivacyPage && !hideNavbarFooter && <Navbar />}
       <Routes>
         <Route path="/" element={
           <>
@@ -47,8 +52,11 @@ const AppContent = () => {
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<BlogPost />} />
         <Route path="/blog/post/:slug" element={<BlogPost />} />
+        <Route path="/land" element={<Landing />} />
+        <Route path="/thank-you" element={<Thankyou />} />
+        
       </Routes>
-      <Footer />
+      {!hideNavbarFooter && <Footer />}
       <ScrollToTopButton />
     </div>
   );
